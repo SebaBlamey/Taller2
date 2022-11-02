@@ -9,6 +9,7 @@ bool check_number(string);
 
 int main()
 {
+    cout <<"olamundo"<<endl;
     string number_turret;
     cout << "Cuantos discos debe tener la torre -> ";
     cin >> number_turret;
