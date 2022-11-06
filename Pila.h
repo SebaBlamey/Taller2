@@ -24,15 +24,11 @@ void push( ptrPila &p, int valor )
 ------------------------------------------------------------------------*/
 int pop( ptrPila &p )
 {
-     int num ;
+     int num;
      ptrPila aux;
-     
-     aux = p ;
-     num = aux->nro;   // asignamos el primer vamor de la pila
-     
-     p = aux->sgte ;
-     delete(aux);
-     
+     aux = p;
+     num = aux->nro;
+     delete aux;
      return num;
 }
  
@@ -48,6 +44,18 @@ void mostrar_pila( ptrPila p )
             cout<<"\t"<< aux->nro <<endl;
             aux = aux->sgte;
      }    
+}
+
+// Craear un funcion que imprima el contenido de una pila
+void imprimi_pila(ptrPila p)
+{
+    ptrPila aux;
+    aux = p;
+    while(aux != NULL)
+    {
+        cout << aux->nro << endl;
+        aux = aux->sgte;
+    }
 }
  
 /*                Eliminar todos los elementos de la pila      
