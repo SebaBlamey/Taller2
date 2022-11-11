@@ -15,6 +15,7 @@ void Pilas::push(int x) {
         root = nuevo;
     }
 }
+
 int Pilas::pop() {
     Nodo *aux = root;
     int numero = aux->numero;
@@ -26,10 +27,9 @@ int Pilas::pop() {
 void Pilas::imprimir() {
     Nodo *temp = root;
     while (temp != NULL) {
-        cout << temp->numero << "\n";
+        cout <<"\t" << temp->numero << endl;
         temp = temp->siguiente;
     }
-    cout << endl;
 }
 
 Pilas::~Pilas() {
